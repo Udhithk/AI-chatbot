@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with AI</title>
+    <link rel="stylesheet" href="Moviee.css">
+</head>
+<body>
+
+    <div class="video-container">
+        <video autoplay loop muted>
+            <source src="Chat background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="chat-container">
+        <!-- Floating Glow Circles -->
+        <div class="circle one"></div>
+        <div class="circle two"></div>
+        <div class="circle three"></div>
+
+        <!-- Chat Header -->
+        <div class="header">
+            <img src="Profile.jpg" alt="User Profile" class="profile-pic">
+            <h2>AI Chat Assistant</h2>
+            <img src="Home.jpg" alt="Home" class="home-icon" onclick="window.location.href='index.html'">
+        </div>
+
+        <!-- Popular Topics -->
+        <div class="topics">
+            <h3>Popular Topics</h3>
+            <button onclick="sendMessage('Best AI-Driven Movie Adaptations')">Best AI-Driven Movie Adaptations</button>
+            <button onclick="sendMessage('How to Pitch Your Book for a Movie?')">How to Pitch Your Book for a Movie?</button>
+        </div>
+
+
+        <!-- Chat Box -->
+        <div class="chat-box" id="chatBox">
+            <div class="message bot">Welcome! Ask me anything about AI book-to-movie adaptations.</div>
+        </div>
+
+        <!-- Chat Input -->
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Type or use voice..." onkeypress="handleKeyPress(event)">
+            <button onclick="sendMessage()">Send</button>
+            <button id="micButton">🎙️</button>
+        </div>
+
+        <!-- AI Recommendations Button -->
+        <button class="recommend-btn" onclick="window.location.href='recommendations.html'">AI Recommendations</button>
+    </div>
+    
+    <script src="Movie.js"></script>
+</body>
+</html>
